@@ -28,8 +28,7 @@ yarn
 Install Ruby dependencies:
 
 ```sh
-cd ios
-pod install
+cd ios && pod install && cd ..
 ```
 
 ## Run
