@@ -12,10 +12,24 @@ npx @react-native-community/cli init ReactNativeCLIQuickstart
 
 ## Install
 
-Install the NPM dependencies:
+Clone the repository:
+
+```sh
+git clone https://github.com/remarkablemark/react-native-cli-quickstart.git
+cd react-native-cli-quickstart
+```
+
+Install Node.js dependencies:
 
 ```sh
 yarn
+```
+
+Install Ruby dependencies:
+
+```sh
+cd ios
+pod install
 ```
 
 ## Run
