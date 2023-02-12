@@ -1,13 +1,15 @@
 {
   "name": "ReactNativeCLIQuickstart",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "yarn test --watch"
   },
   "dependencies": {
     "react": "18.2.0",
