@@ -9,17 +9,19 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
-    await expect(element(by.id('welcome'))).toBeVisible();
+  it('shows the welcome screen', async () => {
+    await expect(element(by.text('Debug'))).toBeVisible();
   });
 
-  it('should show hello screen after tap', async () => {
-    await element(by.id('hello_button')).tap();
-    await expect(element(by.text('Hello!!!'))).toBeVisible();
+  it('renders the text below the fold', async () => {
+    await expect(element(by.text('The Basics'))).toExist();
   });
 
-  it('should show world screen after tap', async () => {
-    await element(by.id('world_button')).tap();
-    await expect(element(by.text('World!!!'))).toBeVisible();
+  it('scrolls to the link and opens it', async () => {
+    await waitFor(element(by.text('Style')))
+      .toBeVisible()
+      .whileElement(by.id('ScrollView'))
+      .scroll(300, 'down');
+    await element(by.text('Style')).tap();
   });
 });

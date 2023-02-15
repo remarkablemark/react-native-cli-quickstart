@@ -72,6 +72,7 @@ export default function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
+        testID="ScrollView"
       >
         <Header />
         <View
