@@ -12,6 +12,7 @@
     "start": "react-native start",
     "test": "jest",
     "test:e2e": "detox test --configuration ios.sim.debug",
+    "test:e2e:watch": "yarn test:e2e --watch",
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
