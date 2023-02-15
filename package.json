@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "build:e2e": "detox build --configuration ios.sim.debug",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "lint:tsc": "tsc --noEmit",
     "start": "react-native start",
     "test": "jest",
+    "test:e2e": "detox test --configuration ios.sim.debug",
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
