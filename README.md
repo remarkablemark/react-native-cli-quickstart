@@ -107,13 +107,13 @@ Read the docs to discover what to do next:
 
 ### Jest
 
-Run unit tests:
+Run the unit tests:
 
 ```sh
 yarn test
 ```
 
-Run unit tests in watch mode:
+Run the unit tests in watch mode:
 
 ```sh
 yarn test:watch
@@ -134,8 +134,14 @@ brew install applesimutils
 yarn build:e2e
 ```
 
-[Run the tests](https://wix.github.io/Detox/docs/introduction/your-first-test#running-tests):
+[Run the E2E tests](https://wix.github.io/Detox/docs/introduction/your-first-test#running-tests):
 
 ```sh
 yarn test:e2e
+```
+
+Run the E2E tests in watch mode:
+
+```sh
+yarn test:e2e:watch
 ```
