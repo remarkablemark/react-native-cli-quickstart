@@ -102,3 +102,40 @@ Read the docs to discover what to do next:
 | [Help](https://reactnative.dev/community/overview) | Need more help? There are many other React Native developers who may have the answer. |
 
 <!-- prettier-ignore-end -->
+
+## Tests
+
+### Jest
+
+Run unit tests:
+
+```sh
+yarn test
+```
+
+Run unit tests in watch mode:
+
+```sh
+yarn test:watch
+```
+
+### Detex
+
+[Install prerequisites](https://wix.github.io/Detox/docs/introduction/getting-started/#2-macos-only-applesimutils):
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+```
+
+[Build the app](https://wix.github.io/Detox/docs/introduction/project-setup#step-5-build-the-app):
+
+```sh
+yarn build:e2e
+```
+
+[Run the tests](https://wix.github.io/Detox/docs/introduction/your-first-test#running-tests):
+
+```sh
+yarn test:e2e
+```
