@@ -145,3 +145,11 @@ Run the E2E tests in watch mode:
 ```sh
 yarn test:e2e:watch
 ```
+
+## Upgrade
+
+[Upgrade to the latest version](https://reactnative.dev/docs/upgrading#react-native-cli):
+
+```sh
+yarn react-native upgrade
+```
