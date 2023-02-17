@@ -21,6 +21,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
+          cache: gradle
           distribution: temurin
           java-version: 17
 
@@ -31,4 +32,4 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: yarn detox test --configuration android.emu.release
+          script: yarn detox test --configuration android.emu.release --headless
