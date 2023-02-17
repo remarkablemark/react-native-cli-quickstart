@@ -26,10 +26,10 @@ jobs:
           java-version: 17
 
       - name: Detox build
-        run: yarn detox build --configuration android.emu.release
+        run: yarn detox build --configuration android.emu.debug
 
       - name: List binary path
-        run: ls android/app/build/outputs/apk/release/
+        run: ls android/app/build/outputs/apk/debug/
 
       - name: Get device name
         id: device
@@ -40,4 +40,4 @@ jobs:
         with:
           api-level: 29
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          script: yarn detox test --configuration android.emu.release --headless
+          script: yarn detox test --configuration android.emu.debug --headless
