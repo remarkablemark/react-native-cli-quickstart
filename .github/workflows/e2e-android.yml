@@ -40,4 +40,4 @@ jobs:
         with:
           api-level: 29
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          script: yarn detox test --configuration android.emu.debug --headless
+          script: yarn detox test --configuration android.emu.debug --headless --record-logs all
