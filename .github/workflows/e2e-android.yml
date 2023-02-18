@@ -41,3 +41,10 @@ jobs:
           api-level: 29
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
           script: yarn detox test --configuration android.emu.debug --headless --record-logs all
+
+      - name: Upload artifacts
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: detox-artifacts
+          path: .artifacts
