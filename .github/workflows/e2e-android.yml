@@ -4,6 +4,8 @@ on: push
 jobs:
   e2e-android:
     runs-on: macos-latest
+    env:
+      DETOX_CONFIGURATION: android.emu.release
 
     steps:
       - name: Checkout repository
@@ -26,10 +28,10 @@ jobs:
           java-version: 17
 
       - name: Detox build
-        run: yarn detox build --configuration android.emu.debug
+        run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
 
       - name: List binary path
-        run: ls android/app/build/outputs/apk/debug/
+        run: tree android/app/build/outputs/apk/
 
       - name: Get device name
         id: device
@@ -41,10 +43,7 @@ jobs:
           api-level: 30
           arch: x86_64
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          profile: pixel
-          script: |
-            avdmanager list device
-            yarn detox test --configuration android.emu.debug --headless --record-logs all
+          script: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
