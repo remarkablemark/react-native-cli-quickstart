@@ -38,11 +38,12 @@ jobs:
       - name: Detox test
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
+          api-level: 30
+          arch: x86_64
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
+          profile: Pixel 3a
           script: |
-            $ANDROID_HOME/platform-tools/adb devices
-            nohup sh -c "$ANDROID_HOME/platform-tools/adb logcat '*:D' > adb-log.txt" &
+            avdmanager list device
             yarn detox test --configuration android.emu.debug --headless --record-logs all
 
       - name: Upload artifacts
