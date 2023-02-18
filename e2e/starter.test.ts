@@ -3,7 +3,7 @@ import { by, device, expect, element } from 'detox';
 describe('Example', () => {
   beforeAll(async () => {
     await device.launchApp();
-  }, 5 * 60 * 1000); // 5 minutes
+  });
 
   beforeEach(async () => {
     await device.reloadReactNative();
