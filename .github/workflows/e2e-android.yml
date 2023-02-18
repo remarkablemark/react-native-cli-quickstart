@@ -40,7 +40,10 @@ jobs:
         with:
           api-level: 29
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          script: yarn detox test --configuration android.emu.debug --headless --record-logs all
+          script: |
+            $ANDROID_HOME/platform-tools/adb devices
+            nohup sh -c "$ANDROID_HOME/platform-tools/adb logcat '*:D' > adb-log.txt" &
+            yarn detox test --configuration android.emu.debug --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
