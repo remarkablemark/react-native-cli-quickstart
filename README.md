@@ -1,5 +1,7 @@
 # React Native CLI Quickstart
 
+[![e2e-ios](https://github.com/remarkablemark/react-native-cli-quickstart/actions/workflows/e2e-ios.yml/badge.svg)](https://github.com/remarkablemark/react-native-cli-quickstart/actions/workflows/e2e-ios.yml)
+
 React Native application created from [React Native CLI Quickstart](https://reactnative.dev/docs/environment-setup#creating-a-new-application):
 
 ```sh
