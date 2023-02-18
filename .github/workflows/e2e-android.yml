@@ -41,7 +41,7 @@ jobs:
           api-level: 30
           arch: x86_64
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          profile: Pixel
+          profile: pixel
           script: |
             avdmanager list device
             yarn detox test --configuration android.emu.debug --headless --record-logs all
