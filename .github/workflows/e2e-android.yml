@@ -17,7 +17,7 @@ jobs:
           cache: yarn
           node-version-file: .nvmrc
 
-      - name: Install dependencies
+      - name: Install Yarn dependencies
         run: yarn --frozen-lockfile --prefer-offline
 
       - name: Setup Java
