@@ -49,6 +49,15 @@ jobs:
       - name: Detox rebuild framework cache
         run: yarn detox rebuild-framework-cache
 
+      - name: Cache Detox build
+        id: cache-detox-build
+        uses: actions/cache@v3
+        with:
+          path: ios/Pods/build
+          key: ${{ runner.os }}-detox-build
+          restore-keys: |
+            ${{ runner.os }}-detox-build
+
       - name: Detox build
         run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
 
