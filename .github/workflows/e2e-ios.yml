@@ -30,7 +30,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: Pods
-          key: ${{ runner.os }}-pods-${{ hashFiles('ios/Podfile.lock') }}
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-pods-
 
@@ -42,7 +42,7 @@ jobs:
         run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
 
       - name: Detox test
-        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --headless --record-logs all
+        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --debug-synchronization 200 --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
