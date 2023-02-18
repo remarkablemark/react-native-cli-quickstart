@@ -20,7 +20,7 @@ module.exports = {
     'ios.release': {
       type: 'ios.app',
       binaryPath: `ios/build/Build/Products/Release-iphonesimulator/${name}.app`,
-      build: `xcodebuild -workspace ios/${name}.xcworkspace -scheme YOUR_APP -configuration Release -sdk iphonesimulator -derivedDataPath ios/build`,
+      build: `xcodebuild -workspace ios/${name}.xcworkspace -scheme ${name} -configuration Release -sdk iphonesimulator -derivedDataPath ios/build`,
     },
     'android.debug': {
       type: 'android.apk',
