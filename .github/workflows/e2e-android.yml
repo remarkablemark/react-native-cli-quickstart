@@ -31,7 +31,9 @@ jobs:
         run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
 
       - name: List binary path
-        run: tree android/app/build/outputs/apk/
+        run: |
+          brew install tree
+          tree android/app/build/outputs/apk/
 
       - name: Get device name
         id: device
