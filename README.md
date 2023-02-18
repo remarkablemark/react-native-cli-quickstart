@@ -21,13 +21,13 @@ git clone https://github.com/remarkablemark/react-native-cli-quickstart.git
 cd react-native-cli-quickstart
 ```
 
-Install Node.js dependencies:
+Install the Node.js dependencies:
 
 ```sh
 yarn
 ```
 
-Install Ruby dependencies:
+Install the Pod dependencies:
 
 ```sh
 cd ios && pod install && cd ..
@@ -35,7 +35,7 @@ cd ios && pod install && cd ..
 
 ## Run
 
-Start your application:
+Start the application:
 
 ```sh
 yarn start
@@ -121,7 +121,7 @@ Run the unit tests in watch mode:
 yarn test:watch
 ```
 
-### Detex
+### Detox
 
 [Install prerequisites](https://wix.github.io/Detox/docs/introduction/getting-started/#2-macos-only-applesimutils):
 
