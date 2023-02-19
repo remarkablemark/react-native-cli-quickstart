@@ -123,7 +123,7 @@ yarn test:watch
 
 ### Detox
 
-[Install prerequisites](https://wix.github.io/Detox/docs/introduction/getting-started/#2-macos-only-applesimutils):
+[Install macOS prerequisites](https://wix.github.io/Detox/docs/introduction/getting-started/#2-macos-only-applesimutils):
 
 ```sh
 brew tap wix/brew
