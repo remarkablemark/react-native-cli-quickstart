@@ -90,7 +90,7 @@ def reactNativeArchitectures() {
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-    testBuildType "release"
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.reactnativecliquickstart"
