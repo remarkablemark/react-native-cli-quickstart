@@ -23,7 +23,6 @@ jobs:
 
       - name: Cache Yarn dependencies
         uses: actions/cache@v3
-        id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -31,7 +30,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Yarn dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile --prefer-offline
 
       - name: Install macOS dependencies
