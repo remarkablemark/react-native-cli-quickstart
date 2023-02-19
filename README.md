@@ -10,7 +10,7 @@ npx @react-native-community/cli init ReactNativeCLIQuickstart
 
 ## Prerequisites
 
-- [Setting up the development environment](https://reactnative.dev/docs/environment-setup)
+[Setting up the development environment](https://reactnative.dev/docs/environment-setup)
 
 ## Install
 
@@ -43,7 +43,7 @@ yarn start
 
 ### Run instructions for Android:
 
-Have an Android emulator running (quickest way to get started), or a device connected.
+Have an Android emulator running:
 
 ```sh
 yarn react-native run-android
@@ -51,23 +51,21 @@ yarn react-native run-android
 
 ### Run instructions for iOS:
 
+Run an iOS simulator:
+
 ```sh
 yarn react-native run-ios
 ```
 
-Or:
-
-Open `./ios/ReactNativeCLIQuickstart.xcworkspace` in Xcode or run:
+Or open `./ios/ReactNativeCLIQuickstart.xcworkspace` in Xcode and hit the **Run** button:
 
 ```sh
 xed -b ios
 ```
 
-Hit the Run button
-
 ### Run instructions for macOS:
 
-See https://aka.ms/ReactNativeGuideMacOS for the latest up-to-date instructions.
+See [Get Started with macOS](https://aka.ms/ReactNativeGuideMacOS) for the latest up-to-date instructions.
 
 ## Usage
 
