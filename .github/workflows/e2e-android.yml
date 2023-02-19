@@ -27,13 +27,17 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Cache Detox build
+        id: cache-detox-build
+        uses: actions/cache@v3
+        with:
+          path: android/app/build
+          key: ${{ runner.os }}-detox-build
+          restore-keys: |
+            ${{ runner.os }}-detox-build
+
       - name: Detox build
         run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
-
-      - name: List binary path
-        run: |
-          brew install tree
-          tree android/app/build/outputs/apk/
 
       - name: Get device name
         id: device
@@ -45,7 +49,8 @@ jobs:
           api-level: 30
           arch: x86_64
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          script: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --headless --record-logs all
+          profile: pixel
+          script: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
