@@ -38,6 +38,8 @@ jobs:
 
       - name: Patch build
         run: |
+          # https://wix.github.io/Detox/docs/troubleshooting/running-tests/#if-you-do-see-your-app-running-on-the-device
+          sed -i '' 's/<application/<application android:usesCleartextTraffic="true"/' android/app/src/main/AndroidManifest.xml
           # https://github.com/facebook/react-native/issues/36207#issuecomment-1435838521
           sed -i '' 's/android {/android { testBuildType "release"/' android/app/build.gradle
 
@@ -55,9 +57,7 @@ jobs:
           arch: x86_64
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
           profile: pixel
-          script: |
-            adb devices
-            yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all
+          script: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all
 
       - name: Upload artifacts
         if: failure()
