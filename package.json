@@ -28,7 +28,7 @@
     "@types/jest": "29.4.0",
     "@types/react": "18.0.28",
     "@types/react-test-renderer": "18.0.0",
-    "babel-jest": "29.4.3",
+    "babel-jest": "29.5.0",
     "babel-plugin-module-resolver": "5.0.0",
     "detox": "20.5.0",
     "eslint": "8.35.0",
