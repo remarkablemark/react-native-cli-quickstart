@@ -17,15 +17,17 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.71.12"
+    "react-native": "0.72.0"
   },
   "devDependencies": {
     "@babel/core": "7.22.6",
     "@babel/preset-env": "7.22.6",
     "@babel/runtime": "7.22.6",
-    "@react-native-community/eslint-config": "3.2.0",
+    "@react-native/eslint-config": "0.72.2",
+    "@react-native/metro-config": "0.72.7",
     "@tsconfig/react-native": "3.0.2",
     "@types/jest": "29.5.2",
+    "@types/metro-config": "0.76.3",
     "@types/react": "18.2.14",
     "@types/react-test-renderer": "18.0.0",
     "babel-jest": "29.5.0",
@@ -37,5 +39,8 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
