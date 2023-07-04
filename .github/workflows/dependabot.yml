@@ -17,6 +17,16 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
+      - name: Get react-native version
+        run: |
+          REACT_NATIVE_VERSION=$(jq -r '.dependencies."react-native"' package.json)
+          echo "REACT_NATIVE_VERSION=$REACT_NATIVE_VERSION" >> $GITHUB_ENV
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: master
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -33,8 +43,7 @@ jobs:
 
       - name: Upgrade react-native
         run: |
-          VERSION=$(jq -r '.dependencies."react-native"' package.json)
-          yarn react-native upgrade $VERSION
+          yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
           cd ios && pod update hermes-engine --no-repo-update && cd -
-          git commit -am "build: upgrade react-native to $VERSION"
-          git push
+          git commit -am '${{ github.event.pull_request.title }}'
+          git push -f origin ${{ github.event.pull_request.head.ref }}
