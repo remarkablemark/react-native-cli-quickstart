@@ -17,6 +17,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --prefer-offline
+
       - name: Configure Git user
         run: |
           git config --global user.name 'github-actions[bot]'
