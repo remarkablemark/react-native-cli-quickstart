@@ -30,7 +30,7 @@
     "@types/metro-config": "0.76.3",
     "@types/react": "18.2.20",
     "@types/react-test-renderer": "18.0.0",
-    "babel-jest": "29.6.2",
+    "babel-jest": "29.6.3",
     "babel-plugin-module-resolver": "5.0.0",
     "detox": "20.11.3",
     "eslint": "8.47.0",
