@@ -63,7 +63,7 @@ jobs:
         run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
 
       - name: Detox test
-        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all
+        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all --take-screenshots failing
 
       - name: Upload artifacts
         if: failure()
