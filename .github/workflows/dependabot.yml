@@ -36,19 +36,16 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile --prefer-offline
 
-      - name: Configure Git user
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
       - name: Upgrade react-native
         run: |
           yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
           cd ios && rm Podfile.lock && pod install && cd -
+
+      - name: Redo last commit
+        run: git pull
 
       - name: Git commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: ${{ github.event.pull_request.title }}
           add_options: '-A'
-          push_options: '--force'
