@@ -15,17 +15,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+          ref: master
 
       - name: Get react-native version
         run: |
-          REACT_NATIVE_VERSION=$(jq -r '.dependencies."react-native"' package.json)
+          PULL_REQUEST_TITLE="${{ github.event.pull_request.head.ref }}"
+          REACT_NATIVE_VERSION="${PULL_REQUEST_TITLE#* to }"
           echo "REACT_NATIVE_VERSION=$REACT_NATIVE_VERSION" >> $GITHUB_ENV
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -46,4 +43,5 @@ jobs:
           yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
           cd ios && rm Podfile.lock && pod install && cd -
           git commit -am '${{ github.event.pull_request.title }}'
-          git push -f origin ${{ github.event.pull_request.head.ref }}
+          git pull --rebase origin master
+          git push --force origin ${{ github.event.pull_request.head.ref }}
