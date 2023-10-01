@@ -11,7 +11,6 @@ jobs:
       github.actor == 'dependabot[bot]' &&
       contains(github.event.pull_request.title, 'build(deps): bump react-native from ')
     runs-on: macos-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -45,6 +44,6 @@ jobs:
       - name: Upgrade react-native
         run: |
           yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
-          cd ios && pod update hermes-engine --no-repo-update && cd -
+          cd ios && rm Podfile.lock && pod install && cd -
           git commit -am '${{ github.event.pull_request.title }}'
           git push -f origin ${{ github.event.pull_request.head.ref }}
