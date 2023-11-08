@@ -39,7 +39,8 @@ jobs:
       - name: Upgrade react-native
         run: |
           yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
-          cd ios && rm Podfile.lock && pod install && cd -
+          rm ios/Podfile.lock
+          bundle exec pod install --project-directory=ios
 
       - name: Redo last commit
         run: git pull
