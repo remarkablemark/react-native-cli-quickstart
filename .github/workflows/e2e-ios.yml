@@ -45,7 +45,7 @@ jobs:
 
       - name: Install CocoaPods
         # if: steps.cache-cocoapods.outputs.cache-hit != 'true'
-        run: cd ios ; pod install ; cd -
+        run: NO_FLIPPER=1 bundle exec pod install --project-directory=ios
 
       - name: Detox rebuild framework cache
         run: yarn detox rebuild-framework-cache
