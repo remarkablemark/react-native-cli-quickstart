@@ -30,7 +30,7 @@ yarn
 Install the Pod dependencies:
 
 ```sh
-cd ios && pod install && cd -
+bundle exec pod install --project-directory=ios
 ```
 
 ## Quickstart
