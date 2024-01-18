@@ -29,7 +29,7 @@ jobs:
 
       - name: Cache Detox build
         id: cache-detox-build
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: android/app/build
           key: ${{ runner.os }}-detox-build
