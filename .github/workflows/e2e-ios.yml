@@ -60,10 +60,21 @@ jobs:
             ${{ runner.os }}-detox-build
 
       - name: Detox build
-        run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
+        run: >
+          yarn detox build
+          --configuration ${{ env.DETOX_CONFIGURATION }}
+          --if-missing
 
       - name: Detox test
-        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all --take-screenshots failing
+        run: >
+          yarn detox test
+          --capture-view-hierarchy enabled
+          --cleanup
+          --configuration ${{ env.DETOX_CONFIGURATION }}
+          --headless
+          --record-logs all
+          --record-videos failing
+          --take-screenshots failing
 
       - name: Upload artifacts
         if: failure()
