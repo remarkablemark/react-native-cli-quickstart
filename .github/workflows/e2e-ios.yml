@@ -34,17 +34,17 @@ jobs:
           ruby-version: 2
           bundler-cache: true
 
-      # - name: Cache CocoaPods
-      #   id: cache-cocoapods
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ios/Pods
-      #     key: ${{ runner.os }}-pods-${{ hashFiles('ios/Podfile.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-pods-
+      - name: Cache CocoaPods
+        id: cache-cocoapods
+        uses: actions/cache@v4
+        with:
+          path: ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('ios/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
 
       - name: Install CocoaPods
-        # if: steps.cache-cocoapods.outputs.cache-hit != 'true'
+        if: steps.cache-cocoapods.outputs.cache-hit != 'true'
         run: NO_FLIPPER=1 bundle exec pod install --project-directory=ios
 
       - name: Detox rebuild framework cache
@@ -60,10 +60,21 @@ jobs:
             ${{ runner.os }}-detox-build
 
       - name: Detox build
-        run: yarn detox build --configuration ${{ env.DETOX_CONFIGURATION }}
+        run: >
+          yarn detox build
+          --configuration ${{ env.DETOX_CONFIGURATION }}
+          --if-missing
 
       - name: Detox test
-        run: yarn detox test --configuration ${{ env.DETOX_CONFIGURATION }} --cleanup --headless --record-logs all --take-screenshots failing
+        run: >
+          yarn detox test
+          --capture-view-hierarchy enabled
+          --cleanup
+          --configuration ${{ env.DETOX_CONFIGURATION }}
+          --headless
+          --record-logs all
+          --record-videos failing
+          --take-screenshots failing
 
       - name: Upload artifacts
         if: failure()
