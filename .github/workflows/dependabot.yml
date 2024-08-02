@@ -20,7 +20,7 @@ jobs:
 
       - name: Get react-native version
         run: |
-          PULL_REQUEST_TITLE="${{ github.event.pull_request.head.ref }}"
+          PULL_REQUEST_TITLE="${{ github.event.pull_request.title }}"
           REACT_NATIVE_VERSION="${PULL_REQUEST_TITLE#* to }"
           echo "REACT_NATIVE_VERSION=$REACT_NATIVE_VERSION" >> $GITHUB_ENV
 
