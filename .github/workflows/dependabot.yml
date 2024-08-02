@@ -20,8 +20,8 @@ jobs:
 
       - name: Get react-native version
         run: |
-          PULL_REQUEST_TITLE="${{ github.event.pull_request.title }}"
-          REACT_NATIVE_VERSION="${PULL_REQUEST_TITLE#* to }"
+          npx react-native info
+          REACT_NATIVE_VERSION=$(jq '.dependencies."react-native"' -r package.json)
           echo "REACT_NATIVE_VERSION=$REACT_NATIVE_VERSION" >> $GITHUB_ENV
 
       - name: Undo last commit
@@ -38,7 +38,7 @@ jobs:
 
       - name: Upgrade react-native
         run: |
-          yarn react-native upgrade ${{ env.REACT_NATIVE_VERSION }}
+          npx react-native upgrade ${{ env.REACT_NATIVE_VERSION }} --verbose
           rm ios/Podfile.lock
           bundle exec pod install --project-directory=ios
 
