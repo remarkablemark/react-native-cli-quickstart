@@ -1996,14 +1996,14 @@
     serve-static "^1.13.1"
     temp-dir "^2.0.0"
 
-"@react-native/eslint-config@0.76.2":
-  version "0.76.2"
-  resolved "https://registry.yarnpkg.com/@react-native/eslint-config/-/eslint-config-0.76.2.tgz#2741eee69ff194b8adc15281c0cb9695ba015ef0"
-  integrity sha512-7w/WkBmBMTu+1i381Wi+XBNINAZaJcvcljShf26u2qXSiSY8pdXL2kb1pS+oZkD7KUDK2AnUbCkSp8hI7+lnyQ==
+"@react-native/eslint-config@0.76.3":
+  version "0.76.3"
+  resolved "https://registry.yarnpkg.com/@react-native/eslint-config/-/eslint-config-0.76.3.tgz#b04b5fa50a9aa3477a11b5c13d394c19791164f3"
+  integrity sha512-TmZ1M6Aw1vnhB9LA0zFx7yq/lQYSWNPpq5fS1jFzz99XemFB92lI9vhqzwRun1VmztTs4Cv1kcJa51xYFRPh2w==
   dependencies:
     "@babel/core" "^7.25.2"
     "@babel/eslint-parser" "^7.25.1"
-    "@react-native/eslint-plugin" "0.76.2"
+    "@react-native/eslint-plugin" "0.76.3"
     "@typescript-eslint/eslint-plugin" "^7.1.1"
     "@typescript-eslint/parser" "^7.1.1"
     eslint-config-prettier "^8.5.0"
@@ -2015,10 +2015,10 @@
     eslint-plugin-react-native "^4.0.0"
     hermes-eslint "^0.23.1"
 
-"@react-native/eslint-plugin@0.76.2":
-  version "0.76.2"
-  resolved "https://registry.yarnpkg.com/@react-native/eslint-plugin/-/eslint-plugin-0.76.2.tgz#cc55f7a31a38675fc7f31195d8551872e9243419"
-  integrity sha512-KHNMyxSNgAY4K1bpeTb7E0iUkqQ3ujAIsBQ0DigAiDVuE2S3j29mq/t1jnuyqBYpw0uwkwGNqIwI7W+vSduEtw==
+"@react-native/eslint-plugin@0.76.3":
+  version "0.76.3"
+  resolved "https://registry.yarnpkg.com/@react-native/eslint-plugin/-/eslint-plugin-0.76.3.tgz#c2fa9b16eebe64de9c70b3e05a6b19792f5a0b41"
+  integrity sha512-aHs61SGO61K/ULI6jUjrIajeYAz3thh0VT2r/cFsgOxeXgr8j98mqr6+beGlHo4BET0TC7u6+p+fxQNGoI9blg==
 
 "@react-native/gradle-plugin@0.73.4":
   version "0.73.4"
