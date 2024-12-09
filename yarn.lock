@@ -1996,14 +1996,14 @@
     serve-static "^1.13.1"
     temp-dir "^2.0.0"
 
-"@react-native/eslint-config@0.76.3":
-  version "0.76.3"
-  resolved "https://registry.yarnpkg.com/@react-native/eslint-config/-/eslint-config-0.76.3.tgz#b04b5fa50a9aa3477a11b5c13d394c19791164f3"
-  integrity sha512-TmZ1M6Aw1vnhB9LA0zFx7yq/lQYSWNPpq5fS1jFzz99XemFB92lI9vhqzwRun1VmztTs4Cv1kcJa51xYFRPh2w==
+"@react-native/eslint-config@0.76.4":
+  version "0.76.4"
+  resolved "https://registry.yarnpkg.com/@react-native/eslint-config/-/eslint-config-0.76.4.tgz#3e44865e9fe52337541ae20a6cd2c50da19c14f2"
+  integrity sha512-VOrpYXCHg4hIHIpq+xK9hMPrXISPfC47utlHUdVcFw6pXHCmX0eemFoLMIkAROlzjEAylooe9Bpf2jwzfo4Vig==
   dependencies:
     "@babel/core" "^7.25.2"
     "@babel/eslint-parser" "^7.25.1"
-    "@react-native/eslint-plugin" "0.76.3"
+    "@react-native/eslint-plugin" "0.76.4"
     "@typescript-eslint/eslint-plugin" "^7.1.1"
     "@typescript-eslint/parser" "^7.1.1"
     eslint-config-prettier "^8.5.0"
@@ -2013,12 +2013,11 @@
     eslint-plugin-react "^7.30.1"
     eslint-plugin-react-hooks "^4.6.0"
     eslint-plugin-react-native "^4.0.0"
-    hermes-eslint "^0.23.1"
 
-"@react-native/eslint-plugin@0.76.3":
-  version "0.76.3"
-  resolved "https://registry.yarnpkg.com/@react-native/eslint-plugin/-/eslint-plugin-0.76.3.tgz#c2fa9b16eebe64de9c70b3e05a6b19792f5a0b41"
-  integrity sha512-aHs61SGO61K/ULI6jUjrIajeYAz3thh0VT2r/cFsgOxeXgr8j98mqr6+beGlHo4BET0TC7u6+p+fxQNGoI9blg==
+"@react-native/eslint-plugin@0.76.4":
+  version "0.76.4"
+  resolved "https://registry.yarnpkg.com/@react-native/eslint-plugin/-/eslint-plugin-0.76.4.tgz#db4107dacad456c39e173241552450741590669f"
+  integrity sha512-zKcOqRTirm9HYfr9ldg/2T5IuzWd0fKGQsCnoaH5Fk/jwPdeC1OfxIkJ/0iRHLv+88U7pd3roY2UGUMJITgMeQ==
 
 "@react-native/gradle-plugin@0.73.4":
   version "0.73.4"
@@ -4149,15 +4148,6 @@ hasown@^2.0.0:
   integrity sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==
   dependencies:
     function-bind "^1.1.2"
-
-hermes-eslint@^0.23.1:
-  version "0.23.1"
-  resolved "https://registry.yarnpkg.com/hermes-eslint/-/hermes-eslint-0.23.1.tgz#e0801e58bd4a70f01b0b0659805f315ab7ea6691"
-  integrity sha512-DaEpbJobK1KwpTSXrPIKkHs2h+B+RTw2F1g9S70tjtJ14a3zM+2gPVUtc8xyffQqRJ6tPfs+/zRKwV17lwDvqA==
-  dependencies:
-    esrecurse "^4.3.0"
-    hermes-estree "0.23.1"
-    hermes-parser "0.23.1"
 
 hermes-estree@0.15.0:
   version "0.15.0"
