@@ -20,7 +20,7 @@
     "react-native": "0.73.2"
   },
   "devDependencies": {
-    "@babel/core": "7.27.7",
+    "@babel/core": "7.28.0",
     "@babel/preset-env": "7.27.2",
     "@babel/runtime": "7.27.6",
     "@react-native/babel-preset": "0.80.0",
