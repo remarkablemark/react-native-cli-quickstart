@@ -3522,10 +3522,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-detox@20.39.0:
-  version "20.39.0"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-20.39.0.tgz#4340720b0a088ef3534ef15aff1c3ecbade1bff4"
-  integrity sha512-EPqtBQ1Yw7KAdQykDur203FVRYh8rhlB4GfcjOzFx0LN8Xfo0kE5ZwmumRWnaQZGRj+XpOj66d4bQnsvFyqlTQ==
+detox@20.40.0:
+  version "20.40.0"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-20.40.0.tgz#91766de53740ef7c05487fba43fd77027702c821"
+  integrity sha512-byPU73HLUOvJ3p+uwkbjPXMQHpwsBvjIfpOLkQIwq++fmESe/nFYczTtaAmRWG+U1AO/YrIDhtYWHnZhTrEb0g==
   dependencies:
     "@wix-pilot/core" "^3.3.0"
     "@wix-pilot/detox" "^1.0.11"
@@ -3557,7 +3557,7 @@ detox@20.39.0:
     stream-json "^1.7.4"
     strip-ansi "^6.0.1"
     telnet-client "1.2.8"
-    tempfile "^2.0.0"
+    tmp "^0.2.1"
     trace-event-lib "^1.3.1"
     which "^1.3.1"
     ws "^7.0.0"
@@ -7418,11 +7418,6 @@ telnet-client@1.2.8:
   dependencies:
     bluebird "^3.5.4"
 
-temp-dir@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-1.0.0.tgz#0a7c0ea26d3a39afa7e0ebea9c1fc0bc4daa011d"
-  integrity sha512-xZFXEGbG7SNC3itwBzI3RYjq/cEhBkx2hJuKGIUOcEULmkQExXiHat2z/qkISYsuR+IKumhEfKKbV5qXmhICFQ==
-
 temp-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-2.0.0.tgz#bde92b05bdfeb1516e804c9c00ad45177f31321e"
@@ -7434,14 +7429,6 @@ temp@^0.8.4:
   integrity sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==
   dependencies:
     rimraf "~2.6.2"
-
-tempfile@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/tempfile/-/tempfile-2.0.0.tgz#6b0446856a9b1114d1856ffcbe509cccb0977265"
-  integrity sha512-ZOn6nJUgvgC09+doCEF3oB+r3ag7kUvlsXEGX069QRD60p+P3uP7XG9N2/at+EyIRGSN//ZY3LyEotA1YpmjuA==
-  dependencies:
-    temp-dir "^1.0.0"
-    uuid "^3.0.1"
 
 terser@^5.15.0:
   version "5.16.3"
@@ -7484,6 +7471,11 @@ through2@^2.0.1:
   dependencies:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
+
+tmp@^0.2.1:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.3.tgz#eb783cc22bc1e8bebd0671476d46ea4eb32a79ae"
+  integrity sha512-nZD7m9iCPC5g0pYmcaxogYKggSfLsdxl8of3Q/oIbqCqLLIO9IAF0GWjX1z9NZRHPiXv8Wex4yDCaZsgEw0Y8w==
 
 tmpl@1.0.5:
   version "1.0.5"
@@ -7680,11 +7672,6 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
-
-uuid@^3.0.1:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
-  integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 v8-to-istanbul@^9.0.1:
   version "9.0.1"
