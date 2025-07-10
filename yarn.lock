@@ -3522,10 +3522,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-detox@20.40.0:
-  version "20.40.0"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-20.40.0.tgz#91766de53740ef7c05487fba43fd77027702c821"
-  integrity sha512-byPU73HLUOvJ3p+uwkbjPXMQHpwsBvjIfpOLkQIwq++fmESe/nFYczTtaAmRWG+U1AO/YrIDhtYWHnZhTrEb0g==
+detox@20.40.1:
+  version "20.40.1"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-20.40.1.tgz#c264db2cb239c43b6c6de2b6d9d9580904880afa"
+  integrity sha512-Octm8WLBCUX/O9V73L6AgAi01SOUIklYtPiqoFRwvJtcEG2otxLrJx1CKXc/nCLwJNh0OGRcvkulfevlSPPMQQ==
   dependencies:
     "@wix-pilot/core" "^3.3.0"
     "@wix-pilot/detox" "^1.0.11"
@@ -3540,7 +3540,7 @@ detox@20.40.0:
     funpermaproxy "^1.1.0"
     glob "^8.0.3"
     ini "^1.3.4"
-    jest-environment-emit "^1.0.8"
+    jest-environment-emit "^1.2.0"
     json-cycle "^1.3.0"
     lodash "^4.17.11"
     multi-sort-stream "^1.0.3"
@@ -5011,10 +5011,10 @@ jest-each@^29.7.0:
     jest-util "^29.7.0"
     pretty-format "^29.7.0"
 
-jest-environment-emit@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/jest-environment-emit/-/jest-environment-emit-1.0.8.tgz#ab0dad2c1dd04d3ca092762a99080607b0eef10b"
-  integrity sha512-WNqvxBLH0yNojHJQ99Y21963aT7UTavxV3PgiBQFi8zwrlnKU6HvkB6LOvQrbk5I8mI8JEKvcoOrQOvBVMLIXQ==
+jest-environment-emit@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-emit/-/jest-environment-emit-1.2.0.tgz#c7334b0d16ec28439cd4a0a641a68e7ae918bb15"
+  integrity sha512-dSFBrRuIiWbHK2LSUA6CutXpMcNGjjuhvxFLF+TVz5tYFAAH0eesrZgrQ3UtOptajDYNt/fIGRqtlHqGq/bLbA==
   dependencies:
     bunyamin "^1.5.2"
     bunyan "^2.0.5"
