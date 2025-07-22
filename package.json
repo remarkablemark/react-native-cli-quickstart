@@ -36,7 +36,7 @@
     "detox": "20.40.2",
     "eslint": "8.57.1",
     "eslint-plugin-prettier": "^5.5.3",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "prettier": "3.6.2",
     "react-test-renderer": "18.2.0",
     "typescript": "5.8.3"
